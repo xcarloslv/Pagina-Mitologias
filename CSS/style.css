@@ -102,6 +102,7 @@ body {
     line-height: 1.7;
     max-width: 500px;
     margin-bottom: 36px;
+    text-align: justify;
 }
 
 /* Contadores / Estadísticas */
@@ -229,6 +230,13 @@ body {
     margin: 0 auto;
     padding: 2.5rem 3.75rem;
 }
+.footer h1{
+    font-family: 'Fraunces', serif;
+    color: #F5F5FA;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
 .footer-title{
     font-family: 'DM Mono', monospace;
     color: #6C6C7D;
@@ -237,4 +245,146 @@ body {
     letter-spacing: 1px;
     margin-bottom: 0;
     text-align: center;
+
+}
+.audio{
+    display: block;
+    margin: 0 auto 1.5rem auto; 
+    max-width: 100%;
+    
+}
+.video {
+    display: block;
+    width: 100%;
+    margin: 0 auto 2.5rem auto; /* 0 arriba, auto a los lados (lo centra), y separación abajo */
+    border-radius: 1rem;
+}
+.content-character {
+    width: 100%;
+    background-color: #0E0E18;
+    padding: 3.5rem 0;
+    margin-top: 40px;
+}
+
+.container-character {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+.viñetas{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    list-style-type: "✦";
+}
+.viñetas a{
+    text-decoration: none;     
+    color: inherit;
+    color: #BD8E43;
+}
+.viñetas a:hover {
+    color: #F5F5FA;
+}
+.character-nordica{
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+.character-nordica h1{
+    font-family: 'Fraunces', serif;
+    color: #BD8E43;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.character-nordica h3{
+    font-family: 'Fraunces', serif;
+    color: #F5F5FA;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.content-description{
+    
+    max-width: 1250px;
+    margin: 40px auto 80px auto;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+.btn-regresar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: #BD8E43;
+    text-decoration: none;
+    border: 1px solid rgba(189, 142, 67, 0.4);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+}
+.btn-regresar:hover {
+    background-color: rgba(189, 142, 67, 0.12);
+    border-color: #BD8E43;
+    color: #F5F5FA;
+}
+.footer-retorno {
+    width: 100%;
+    padding: 3rem 60px 4rem 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-regresar-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: #BD8E43;
+    text-decoration: none;
+    background-color: #0E0E18;
+    border: 1px solid #1C1C2C;
+    padding: 0.85rem 1.8rem;
+    border-radius: 0.8rem;
+}
+
+.btn-regresar-footer:hover {
+    border-color: #BD8E43;
+    color: #FFFFFF;
+}
+.section-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 60px auto;
+    width: 90%;
+}
+
+.divider-line {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, #c5a059, transparent);
+    border-radius: 8px;
+}
+
+.divider-star {
+    margin-top: -33px;
+    z-index: 2;
+    background-color: #0b0b0e;
+    padding: 0 10px;
+}
+
+.spark-icon {
+    font-size: 40px;
+    color: #c5a059;
+    text-shadow: 0 0 8px rgba(197, 160, 89, 0.6);
 }
