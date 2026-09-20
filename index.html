@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="NEXUS">
+    <meta name="author" content="NEXUS-Carlos Emanuel López Villanueva, Luz Karina Araujo Aguilar, Jair Mardoqueo Sanchez Villa">
     <meta charset="UTF-8">
     <link type="image/png" sizes="16x16" rel="icon" href="IMG/icono.png">
     <link rel="stylesheet" href="./CSS/style.css">
@@ -16,6 +16,14 @@
                 <span class="logo-spark">✦</span>
                 <h3 class="nav-title">Atlas de Mitologías</h3>
             </div>
+            <nav class="nav-menu">
+                <ul class="nav-lista">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#mitologias" class="nav-link">Mitologías</a></li>
+                    <li><a href="#recomendaciones" class="nav-link">Buzón</a></li>
+                    <li><a href="#leyendas" class="nav-link">Multimedia</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -51,7 +59,7 @@
                 <img src="IMG/map.jfif" alt="Carta astral y mapa cósmico">
             </div>
         </section>
-        <section class="content-target">
+        <section class="content-target" id="mitologias">
             <div class="container-target">
                 <div class="content-title">
                     <h1>
@@ -115,8 +123,67 @@
 
             </div>
         </section>
+        <section class="sec-recomendaciones" id="recomendaciones">
+            <div class="contenedor-form">
+                <div class="header-form">
+                    <span class="tagline-form">✦ COMUNIDAD DEL ATLAS</span>
+                    <h2 class="titulo-form">Buzón de Recomendaciones</h2>
+                    <p class="desc-form">
+                        ¿Conoces algún mito, héroe o criatura que debamos incluir en el compendio? Comparte su historia con nosotros.
+                    </p>
+                </div>
+
+                <form action="#" method="POST" class="form-mitologia">
+                    <div class="campo-grupo">
+                        <label for="sugerencia-nombre">Nombre de la leyenda o personaje:</label>
+                        <input type="text" id="sugerencia-nombre" name="nombre_leyenda" placeholder="Ej. Quetzalcóatl, El Minotauro, La Llorona..." required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="tipo-mitologia">Región o mitología:</label>
+                        <select id="tipo-mitologia" name="mitologia_region" required>
+                            <option value="" disabled selected>Selecciona una tradición...</option>
+                            <option value="celta">Mitología Celta</option>
+                            <option value="eslava">Mitología Eslava</option>
+                            <option value="azteca">Mitología Azteca / Mexica</option>
+                            <option value="mesopotamica">Mitología Mesopotámica</option>
+                            <option value="otra">Otra tradición / Leyenda local</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="descripcion-leyenda">Descripción o relato:</label>
+                        <textarea id="descripcion-leyenda" name="descripcion" rows="4" placeholder="Describe brevemente de qué trata esta leyenda, sus orígenes o sus hazañas..." required></textarea>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label>Tipo de relato:</label>
+                        <div class="opciones-inline">
+                            <label class="radio-label">
+                                <input type="radio" name="tipo_relato" value="dios" checked>
+                                Dios o Deidad
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="tipo_relato" value="criatura">
+                                Criatura o Bestia
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="tipo_relato" value="leyenda">
+                                Leyenda / Mito épico
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="btn-container-form">
+                        <button type="submit" class="btn-enviar-form">
+                            Enviar recomendación <span>✦</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="leyendas">
         <h1>Leyendas</h1>
         <video class="video"  src="IMG/34 CRIATURAS MITOLÓGICAS de mitos y leyendas.mp4" controls></video>
         <audio src="IMG/audio.mp3" autoplay controls class="audio"></audio>
