@@ -360,18 +360,31 @@ body {
     border-color: #BD8E43;
     color: #FFFFFF;
 }
-.seccion-divider {
-    width: 100%;
-    border: none;
-    border-top: 3px solid #BD8E43; /* o rgba(189, 142, 67, 0.25) si la prefieres dorada */
-    margin: 50px 0;
-    
+.section-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 60px auto;
+    width: 90%;
 }
-.seccion-divider2 {
-    max-width: 1130px;
+
+.divider-line {
     width: 100%;
-    border: none;
-    border-top: 1px solid #BD8E43;
-    margin: 50px auto;
-    
+    height: 6px;
+    background: linear-gradient(90deg, transparent, #c5a059, transparent);
+    border-radius: 8px;
+}
+
+.divider-star {
+    margin-top: -33px;
+    z-index: 2;
+    background-color: #0b0b0e;
+    padding: 0 10px;
+}
+
+.spark-icon {
+    font-size: 40px;
+    color: #c5a059;
+    text-shadow: 0 0 8px rgba(197, 160, 89, 0.6);
 }
