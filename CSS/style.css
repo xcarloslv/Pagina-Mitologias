@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A0A12;
+    color: #E2E2EB;
+    font-family: 'JetBrains Mono', monospace;
+    overflow-x: hidden;
+}
+
+/* Header & Barra Superior */
+.header {
+    width: 100%;
+    padding: 24px 60px;
+}
+
+.header-contenido {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.nav-title {
+    font-family: 'Fraunces', serif;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+/* Sección Introduction (Contenedor de dos columnas) */
+.introduction {
+    max-width: 1250px;
+    margin: 40px auto 80px auto;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Columna Izquierda */
+.intro-left {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tagline-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.tagline-line {
+    width: 28px;
+    height: 1px;
+    background-color: #BD8E43;
+}
+
+.intro-tagline {
+    color: #BD8E43;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.intro-title {
+    font-family: 'Fraunces', serif;
+    color: #F5F5FA;
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.intro-title i {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #D6A458;
+}
+
+.intro-description {
+    color: #9090A0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 36px;
+}
+
+/* Contadores / Estadísticas */
+.intro-count {
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.count-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.cantidad-mitologias {
+    font-family: 'Fraunces', serif;
+    color: #FFFFFF;
+    font-size: 2.1rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.tipo-mitologias {
+    color: #6C6C7D;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+/* Columna Derecha (Imagen y Tarjeta flotante) */
+.img-mundo {
+    flex: 0.9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.img-mundo img {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(189, 142, 67, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    display: block;
+}
+.content-target {
+    width: 100%;
+    background-color: #0E0E18;
+    padding: 4rem 0 6rem 0;
+    margin: 0;
+}
+
+.container-target {
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 3.75rem;
+}
+.content-title h1{
+    font-family: 'Fraunces', serif;
+    color: #F5F5FA;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+.carrusel{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 1.5rem;
+}
+.list-target{
+    background-color: #0E0E18;
+    border: 1px solid #1C1C2C;
+    border-radius: 1.1rem;
+    padding: 2rem 1.8rem;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 15rem;
+    cursor: pointer;
+}
+.top-content-target-mitologia{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.location-title{
+    font-family: 'DM Mono', monospace;    font-size: 0.7rem;   
+    color: #BD8E43;
+    font-weight: 500;
+    padding: 0 0 1rem 0;
+}
+.number-mitologia{
+    font-family: 'Newsreader', serif;
+    font-size: 1.35rem;
+    font-weight: 500;  
+    color: #3A394B;
+    padding: 0 0 1rem 0;
+
+}
+.title-content-target-mitologia{
+    font-family: 'Newsreader', serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: white;
+    padding: 0 0 1rem 0;
+}
+.description-content-target-mitologia{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 400;
+    color: #9090A0;
+    padding: 0 0 1rem 0;
+}
+.list-target:hover{
+    border: 1px solid #BD8E43;
+}
+.footer{
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 2.5rem 3.75rem;
+}
+.footer-title{
+    font-family: 'DM Mono', monospace;
+    color: #6C6C7D;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-align: center;
+}
