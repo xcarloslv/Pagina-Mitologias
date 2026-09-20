@@ -185,6 +185,8 @@ body {
     justify-content: flex-start;
     min-height: 15rem;
     cursor: pointer;
+    text-decoration: none;     
+    color: inherit;
 }
 .top-content-target-mitologia{
     display: flex;
