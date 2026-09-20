@@ -388,3 +388,262 @@ body {
     color: #c5a059;
     text-shadow: 0 0 8px rgba(197, 160, 89, 0.6);
 }
+.sec-recomendaciones {
+    width: 100%;
+    background-color: #0b0b14;
+    padding: 5rem 0 6rem 0;
+    border-top: 1px solid #1C1C2C;
+}
+
+.contenedor-form {
+    max-width: 78rem;
+    margin: 0 auto;
+    padding: 0 3.75rem;
+    box-sizing: border-box;
+}
+
+.header-form {
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.tagline-form {
+    display: inline-block;
+    color: #BD8E43;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+.titulo-form {
+    font-family: 'Fraunces', serif;
+    color: #F5F5FA;
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+}
+
+.desc-form {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #9090A0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0;
+}
+
+.form-mitologia {
+    background-color: #0E0E18;
+    border: 1px solid #1C1C2C;
+    border-radius: 1.2rem;
+    padding: 2.5rem 3rem;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.campo-grupo label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.82rem;
+    color: #E2E2EB;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.form-mitologia input[type="text"],
+.form-mitologia select,
+.form-mitologia textarea {
+    width: 100%;
+    background-color: #08080E;
+    border: 1px solid #1C1C2C;
+    border-radius: 0.6rem;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.9rem 1.1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-mitologia textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.6;
+}
+
+.form-mitologia input[type="text"]:focus,
+.form-mitologia select:focus,
+.form-mitologia textarea:focus {
+    border-color: #BD8E43;
+    box-shadow: 0 0 8px rgba(189, 142, 67, 0.25);
+}
+
+.form-mitologia select option {
+    background-color: #0E0E18;
+    color: #FFFFFF;
+}
+
+.opciones-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.3rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 0.85rem !important;
+    color: #9090A0 !important;
+    text-align: left;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: #BD8E43;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.btn-container-form {
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-enviar-form {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #BD8E43;
+    color: #0A0A12;
+    border: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.9rem 1.8rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-enviar-form:hover {
+    background-color: #d6a458;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-lista {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: #9090A0;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: #BD8E43;
+}
+/* Sección de la tabla: ocupa todo el ancho de la pantalla de orilla a orilla */
+.sec-secundarios-full {
+    width: 100%;
+    background-color: #0E0E18;
+    padding: 3.5rem 0;
+    margin-top: 40px;
+}
+
+/* Contenedor interno: alinea el texto y la tabla al mismo ancho que el resto del sitio */
+.sec-secundarios-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.sec-secundarios-titulo {
+    font-family: 'Fraunces', serif;
+    color: #F5F5FA;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.tabla-secundario {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #0b0b14;
+    border: 1px solid #1C1C2C;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabla-secundario thead tr {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.tabla-secundario th {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: #BD8E43;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 1.2rem 2rem;
+    border-bottom: 1px solid #1C1C2C;
+}
+
+.tabla-secundario .th-personaje {
+    width: 28%;
+    border-right: 1px solid #1C1C2C;
+}
+
+.tabla-secundario tbody tr:hover {
+    background-color: rgba(189, 142, 67, 0.03);
+}
+
+.tabla-secundario td {
+    padding: 1.8rem 2rem;
+    vertical-align: middle;
+}
+
+.tabla-secundario .td-nombre {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    border-right: 1px solid #1C1C2C;
+    white-space: nowrap;
+}
+
+.tabla-secundario .td-texto {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #9090A0;
+    text-align: justify;
+}
