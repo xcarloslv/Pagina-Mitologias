@@ -647,3 +647,6 @@ body {
     color: #9090A0;
     text-align: justify;
 }
+.content-description.invertido {
+    flex-direction: row-reverse;
+}
