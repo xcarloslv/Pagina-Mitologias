@@ -133,7 +133,7 @@
                     </p>
                 </div>
 
-                <form action="#" method="POST" class="form-mitologia">
+                <form action="mailto:carlos0lopez8@gmail.com" enctype="text/plain" method="POST" class="form-mitologia">
                     <div class="campo-grupo">
                         <label for="sugerencia-nombre">Nombre de la leyenda o personaje:</label>
                         <input type="text" id="sugerencia-nombre" name="nombre_leyenda" placeholder="Ej. Quetzalcóatl, El Minotauro, La Llorona..." required>
@@ -171,6 +171,9 @@
                                 <input type="radio" name="tipo_relato" value="leyenda">
                                 Leyenda / Mito épico
                             </label>
+                            <label>
+                                <input type="checkbox" name="leido" required> He leído y acepto los términos de envío
+                            </label>
                         </div>
                     </div>
 
@@ -178,6 +181,7 @@
                         <button type="submit" class="btn-enviar-form">
                             Enviar recomendación <span>✦</span>
                         </button>
+                        <button type="reset" class="btn-reset-form">Limpiar formulario</button>
                     </div>
                 </form>
             </div>

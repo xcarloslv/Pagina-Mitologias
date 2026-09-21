@@ -647,3 +647,21 @@ body {
     color: #9090A0;
     text-align: justify;
 }
+.content-description.invertido {
+    flex-direction: row-reverse;
+}
+.btn-reset-form {
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: #e0d0b0;
+    background: rgba(224, 169, 109, 0.08);
+    border: 1px solid rgba(224, 169, 109, 0.35);
+    border-radius: 9999px; 
+    cursor: pointer;
+}
