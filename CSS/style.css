@@ -726,5 +726,10 @@ body {
     transform: scale(1.03);
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
 }
-
+.total1{
+    font-family: 'Fraunces', serif;
+    color: #F5F5FA;
+    font-size: 1.3rem;
+    font-weight: 400;   
+}
 
