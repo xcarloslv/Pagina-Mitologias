@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Catálogo - Atlas de Mitologías</title>
+    <link rel="stylesheet" href="../CSS/style.css"/>
+    <script src="../JS/carrito.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h3>Catálogo de Productos</h3>
+            
+            <form id="form_producto" name="prodform">
+                <label>Selecciona Mitología:</label>
+                <select id="producto">
+                    <option value="Mitología Griega|150">Mitología Griega - $150</option>
+                    <option value="Mitología Nórdica|200">Mitología Nórdica - $200</option>
+                    <option value="Mitología Egipcia|180">Mitología Egipcia - $180</option>
+                    <option value="Mitología Maya|160">Mitología Maya - $160</option>
+                    <option value="Mitología Japonesa|190">Mitología Japonesa - $190</option>
+                </select>
+
+                <br/><br/>
+                <input type="button" value="Agregar al Carrito" id="add_cart" onclick="meterEnCarro()"/>
+                <input type="button" value="Ver Carrito" id="go_cart" onclick="irAlCarrito()"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

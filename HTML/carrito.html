@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tu Carrito</title>
+    <link rel="stylesheet" href="../CSS/style.css"/>
+    <script src="../JS/carrito.js"></script>
+</head>
+<body onload="cargarCarrito()">
+    <div class="container">
+        <div class="main">
+            <h3>Carrito de Compras</h3>
+
+            <div>
+                <div id="lista_productos"></div>
+                <br/>
+                <p><b>Total a pagar: </b>$<span id="prod_precio">0</span></p>
+            </div>
+
+            <br/>
+            <input type="button" value="Vaciar Carrito" id="empty_cart" onclick="vaciarCarrito()"/>
+            <input type="button" value="Volver al Catálogo" onclick="volver()"/>
+        </div>
+    </div>
+</body>
+</html>
