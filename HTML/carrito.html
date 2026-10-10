@@ -1,25 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Tu Carrito</title>
-    <link rel="stylesheet" href="../CSS/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carlos Emanuel López Villanueva, Luz Karina Araujo Aguilar, Jair Mardoqueo Sanchez Villa, Jovani Israel Perez Puente">
+    <link type="image/png" sizes="16x16" rel="icon" href="../IMG/icono.png">
+    <link rel="stylesheet" href="../CSS/style.css">
     <script src="../JS/carrito.js"></script>
+    <title>Carrito de Compras - Atlas de Mitologías</title>
 </head>
 <body onload="cargarCarrito()">
-    <div class="container">
-        <div class="main">
-            <h3>Carrito de Compras</h3>
-
-            <div>
-                <div id="lista_productos"></div>
-                <br/>
-                <p><b>Total a pagar: </b>$<span id="prod_precio">0</span></p>
+    <!-- Header principal -->
+    <header class="header">
+        <div class="header-contenido">
+            <div class="logo-box">
+                <span class="logo-spark">✦</span>
+                <h3 class="nav-title">Atlas de Mitologías</h3>
             </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-lista">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                    <li><a href="carrito.html" class="nav-link" style="color: #BD8E43;">Carrito</a></li>
+                </ul>
+            </nav>
 
-            <br/>
-            <input type="button" value="Vaciar Carrito" id="empty_cart" onclick="vaciarCarrito()"/>
-            <input type="button" value="Volver al Catálogo" onclick="volver()"/>
+            <a href="catalogo.html" class="btn-regresar">
+                <span>←</span> Volver al catálogo
+            </a>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <!-- Sección de formulario reutilizando tus estilos compactos (sec-recomendaciones) -->
+        <section class="sec-recomendaciones">
+            <div class="contenedor-form">
+                <div class="header-form">
+                    <span class="tagline-form">✦ TU SELECCIÓN CÓSMICA</span>
+                    <h2 class="titulo-form">Carrito de Compras</h2>
+                    <p class="desc-form">
+                        Revisa los artículos acumulados en tu pedido antes de proceder al pago.
+                    </p>
+                </div>
+
+                <!-- Formulario compacto usando la clase form-mitologia de tu CSS (max-width: 750px) -->
+                <div class="form-mitologia">
+                    <!-- Lista de productos -->
+                    <div id="lista_productos" class="campo-grupo"></div>
+
+                    <!-- Divisor de línea decorativo -->
+                    <div class="separator-container">
+                        <hr class="linea-egipcia">
+                        <span class="symbol-icon">✦</span>
+                    </div>
+
+                    <!-- Total a pagar -->
+                    <div class="campo-grupo">
+                        <span class="total">TOTAL A PAGAR:</span>
+                        <h1 class="total1">
+                            $<span id="prod_precio">0</span> USD
+                        </h1>
+                    </div>
+
+                    <!-- Botones reutilizando las clases de tus botones -->
+                    <div class="btn-container-form">
+                        <button class="btn-enviar-form" onclick="volver()">
+                            <span>←</span> Volver al Catálogo
+                        </button>
+                        <button class="btn-reset-form" onclick="vaciarCarrito()">
+                            Vaciar Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
