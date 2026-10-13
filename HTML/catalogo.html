@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="../JS/carrito.js"></script>
     <title>Sección de Compras - Atlas de Mitologías</title>
-
 </head>
 <body onload="actualizarMitologia()">
     <header class="header">
@@ -39,9 +38,10 @@
                     <span class="tagline-form">✦ TIENDA DE RELIQUIAS</span>
                     <h2 class="titulo-form">Catálogo de Artículos Místicos</h2>
                     <p class="desc-form">
-                        Filtra por mitología para explorar libros, réplicas y coleccionables. Selecciona el artículo deseado para ver sus detalles en la tabla y añadirlo a tu carrito.
+                        Filtra por mitología para explorar libros, réplicas y coleccionables. Selecciona el artículo deseado, ajusta la cantidad en la tabla y añádelo a tu carrito.
                     </p>
                 </div>
+
 
                 <div class="form-mitologia" style="margin-bottom: 2rem;">
                     <div class="campo-grupo">
@@ -55,6 +55,7 @@
                     </div>
                 </div>
 
+             
                 <div class="form-mitologia">
                     
                     <div class="campo-grupo">
@@ -63,14 +64,15 @@
                         </select>
                     </div>
 
-                    <div style="margin-top: 1rem;">
+                    <div style="margin-top: 1.2rem;">
                         <table class="tabla-secundario">
                             <thead>
                                 <tr>
                                     <th style="width: 15%; text-align: center;">Imagen</th>
                                     <th class="th-personaje">Artículo</th>
                                     <th>Descripción de la Reliquia</th>
-                                    <th style="width: 18%;">Precio</th>
+                                    <th style="width: 15%; text-align: center;">Cantidad</th>
+                                    <th style="width: 15%;">Precio</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -80,6 +82,9 @@
                                     </td>
                                     <td class="td-nombre" id="td_nombre_art">--</td>
                                     <td class="td-texto" id="td_desc_art">--</td>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <input type="number" id="cantidad_art" value="1" min="1" max="99" class="input-cantidad" style="width: 60px; text-align: center;">
+                                    </td>
                                     <td class="td-nombre" style="color: #BD8E43;" id="td_precio_art">--</td>
                                 </tr>
                             </tbody>
