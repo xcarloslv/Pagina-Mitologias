@@ -22,7 +22,10 @@ var datosMitologias = {
         { nombre: "Espejo Yata no Kagami", precio: 210, desc: "Réplica en bronce del tesoro sagrado imperial.", img: "../IMG/yata.png", val: "Espejo Yata no Kagami|210|../IMG/yata.png" }
     ]
 };
-
+/**
+ * Función que actualiza las opciones del menú desplegable de productos (<select>)
+ * según la mitología seleccionada por el usuario.
+ */
 function actualizarMitologia() {
     var mit = document.getElementById("select_mitologia").value;
     var selectProd = document.getElementById("producto");
@@ -38,7 +41,10 @@ function actualizarMitologia() {
     }
     actualizarDetalleProducto();
 }
-
+/**
+ * Función que muestra los detalles del producto seleccionado (imagen, nombre, descripción y precio)
+ * en la vista principal o tabla del catálogo.
+ */
 function actualizarDetalleProducto() {
     var mit = document.getElementById("select_mitologia").value;
     var selectProd = document.getElementById("producto");
@@ -46,7 +52,7 @@ function actualizarDetalleProducto() {
 
     if (indice < 0) indice = 0;
     var item = datosMitologias[mit][indice];
-
+// Si el producto existe, actualiza los elementos HTML correspondientes con sus datos
     if (item) {
         document.getElementById("img_art").src = item.img;
         document.getElementById("img_art").alt = item.nombre;
@@ -55,20 +61,36 @@ function actualizarDetalleProducto() {
         document.getElementById("td_precio_art").innerText = "$" + item.precio + " USD";
     }
 }
-
+/**
+ * Función que agrega el producto seleccionado al almacenamiento local (localStorage)
+ * repitiendo el ítem según la cantidad indicada.
+ */
 function meterEnCarro() {
     var productoVal = document.getElementById("producto").value;
     var cantidadInput = document.getElementById("cantidad_art");
-    var cantidad = cantidadInput ? parseInt(cantidadInput.value) || 1 : 1;
+    var cantidad;
+
+        if (cantidadInput) {
+            var valorConvertido = parseInt(cantidadInput.value);
+            
+            if (valorConvertido) {
+                cantidad = valorConvertido;
+            } else {
+                cantidad = 1; // Si el usuario dejó el input vacío o puso texto no válido
+            }
+        } else {
+            cantidad = 1; // Si el campo input no existe en el HTML
+        }
 
     // Guardar el producto repetido tantas veces como la cantidad elegida
     var listaActual = localStorage.getItem("savedproducto");
     var nuevosItems = [];
+    // Guarda el valor del producto en un arreglo tantas veces como la cantidad elegida
     for (var i = 0; i < cantidad; i++) {
         nuevosItems.push(productoVal);
     }
     var cadenaNuevos = nuevosItems.join(",");
-
+// Concatena con los artículos existentes en localStorage o crea un nuevo registro
     if (listaActual) {
         localStorage.setItem("savedproducto", listaActual + "," + cadenaNuevos);
     } else {
@@ -86,23 +108,30 @@ function cargarCarrito() {
     var listaGuardada = localStorage.getItem("savedproducto");
     var contenedor = document.getElementById("lista_productos");
     var totalTexto = document.getElementById("prod_precio");
-    
+    // Si la página actual no tiene el contenedor del carrito (por ejemplo, estás en el catálogo), corta la ejecución de la función
     if (!contenedor) return;
     contenedor.innerHTML = ""; 
     var totalSumado = 0;
-
+    //&& and
+    //  Comprueba si existen datos guardados y que no sea solo espacio en blanco
     if (listaGuardada && listaGuardada.trim() !== "") {
+        // Convierte la gran cadena separada por comas en un arreglo/lista de productos individuales
         var items = listaGuardada.split(",");
         var agrupados = {};
 
-        
+        // Primer ciclo: Recorre cada producto individual que estaba en la lista de localStorage
         for (var i = 0; i < items.length; i++) {
             var item = items[i].trim();
+            // Contar cuántas veces aparece cada producto (si ya existe le suma 1, si es el primero inicia en 0 + 1)
             if (item) agrupados[item] = (agrupados[item] || 0) + 1;
         }
 
-       
+       // Segundo ciclo: Recorre cada producto único guardado en el objeto 'agrupados'
         for (var clave in agrupados) {
+            // Separa el texto "Nombre|Precio|RutaImagen" usando la barra '|' como delimitador
+            // d[0] = Nombre del producto
+            // d[1] = Precio unitario
+            // d[2] = Ruta de la imagen
             var d = clave.split("|"); 
             var cantidad = agrupados[clave];
             var subtotal = Number(d[1]) * cantidad;

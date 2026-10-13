@@ -1,9 +1,17 @@
-
+// Variables globales para guardar los productos de la factura, el total sumado y el estado de la compra
 let productosFactura = [];
 let totalFactura = 0;
 let compraFinalizada = false;
 
+/**
+ * Función que obtiene los datos del usuario, lee el carrito guardado
+ * y dibuja la tabla de la factura en el HTML.
+ */
 // Obtener los datos del usuario y del carrito
+/**
+ * Función que obtiene los datos del usuario, lee el carrito guardado
+ * y dibuja la tabla de la factura en el HTML.
+ */
 function cargarFactura() {
     const sesion = sessionStorage.getItem("usuarioActivo");
 
@@ -34,22 +42,23 @@ function cargarFactura() {
         document.getElementById("btnPDF").disabled = true;
         return;
     }
-
+    // Separa la lista por comas y elimina elementos vacíos
     const productos = carrito.split(",").filter(function (dato) {
         return dato.trim() !== "";
     });
 
     // Agrupar productos repetidos
+    // Agrupa los productos repetidos en un arreglo de objetos ({ nombre, precio, cantidad })
     productos.forEach(function (dato) {
         const partes = dato.split("|");
 
         const nombre = partes[0];
         const precio = Number(partes[1]);
-
+        // Filtro de seguridad: ignora el producto si no tiene nombre o si el precio no es un número válido
         if (!nombre || !Number.isFinite(precio)) {
             return;
         }
-
+        // Busca si el producto ya existe en nuestro arreglo productosFactura
         const existente = productosFactura.find(function (producto) {
             return producto.nombre === nombre &&
                    producto.precio === precio;
@@ -108,6 +117,7 @@ function cargarFactura() {
 
 // Generar el comprobante PDF
 function generarPDF() {
+    // Evita volver a generar el PDF si la compra ya finalizó
     if (compraFinalizada) {
         return;
     }
