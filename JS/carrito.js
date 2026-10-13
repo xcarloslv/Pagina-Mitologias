@@ -1,13 +1,13 @@
 var datosMitologias = {
     nordica: [
-        { nombre: "Martillo de Thor (Mjölnir Coleccionable)", precio: 250, desc: "Réplica a escala en resina y metal con inscripciones rúnicas.", img: "../IMG/martillo_thor.png", val: "Martillo de Thor Coleccionable|250|../IMG/martillo_thor.png" },
+        { nombre: "Martillo de Thor (Mjölnir Coleccionable)", precio: 250, desc: "Réplica a escala en resina y metal con inscripciones rúnicas.", img: "../IMG/Martillo_thor.png", val: "Martillo de Thor Coleccionable|250|../IMG/Martillo_thor.png" },
         { nombre: "Libro: Edda Mayor y Menor (Edición Ilustrada)", precio: 180, desc: "Compendio completo de poesía mitológica nórdica encuadernado en piel.", img: "../IMG/libro_eda.png", val: "Libro Edda Mayor y Menor|180|../IMG/libro_eda.png" },
         { nombre: "Figura Decorativa de Odín en el Trono", precio: 210, desc: "Estatuilla esculpida a detalle junto a sus cuervos Hugin y Munin.", img: "../IMG/Odin_trono.jpg", val: "Figura Decorativa Odín|210|../IMG/Odin_trono.jpg" },
         { nombre: "Amuleto Valknut de Plata", precio: 120, desc: "Símbolo nórdico de los guerreros en plata esterlina.", img: "../IMG/Amuleto.jpg", val: "Amuleto Valknut Plata|120|../IMG/Amuleto.jpg" }
     ],
     egipcia: [
         { nombre: "Estatua Dorada de Anubis", precio: 220, desc: "Figura coleccionable en acabado dorado del guardián de las tumbas.", img: "../IMG/estatua_anubis.png", val: "Estatua Dorada Anubis|220|../IMG/estatua_anubis.png" },
-        { nombre: "Libro de los Muertos (Papiro Impreso)", precio: 190, desc: "Facsímil detallado en papiro vegetal con jeroglíficos tradicionales.", img: "../IMG/libro_muertos.png", val: "Libro de los Muertos Papiro|190|../IMG/libro_muertos.png" },
+        { nombre: "Libro de los Muertos (Papiro Impreso)", precio: 190, desc: "Facsímil detallado en papiro vegetal con jeroglíficos tradicionales.", img: "../IMG/Libro_muertos.png", val: "Libro de los Muertos Papiro|190|../IMG/Libro_muertos.png" },
         { nombre: "Colgante del Ojo de Horus", precio: 140, desc: "Símbolo de protección espiritual labrado en lapislázuli.", img: "../IMG/Ojodehorus.jpg", val: "Colgante Ojo de Horus|140|../IMG/Ojodehorus.jpg" },
         { nombre: "Sarcófago de Tutankamón en Miniatura", precio: 260, desc: "Edición de colección tallada con acabados esmaltados.", img: "../IMG/tutankamon.jpg", val: "Miniatura Sarcófago Tutankamón|260|../IMG/tutankamon.jpg" }
     ],
