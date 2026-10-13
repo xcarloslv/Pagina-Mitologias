@@ -202,6 +202,7 @@ function generarPDF() {
         "Compra finalizada. Tu factura PDF se ha generado.";
 
     alert("¡Compra confirmada! Tu PDF se ha generado correctamente.");
+    window.print();
 }
 
 // Cargar la factura cuando abre la página
