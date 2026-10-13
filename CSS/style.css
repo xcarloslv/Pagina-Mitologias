@@ -733,3 +733,51 @@ body {
     font-weight: 400;   
 }
 
+.form-mitologia .tabla-secundario {
+    margin-top: 0.5rem;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    background-color: #08080E;
+}
+
+.form-mitologia .tabla-secundario td, 
+.form-mitologia .tabla-secundario th {
+    padding: 1rem 1.2rem;
+    font-size: 0.85rem;
+}
+
+.form-mitologia .tabla-secundario .td-nombre {
+    font-size: 1rem;
+    white-space: normal; /* Permite que los nombres largos se ajusten bien */
+}
+
+
+.img-preview-articulo {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(189, 142, 67, 0.4);
+    background-color: #0E0E18;             
+}
+
+.contenedor-cantidad {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contenedor-cantidad label {
+    margin: 0;
+}
+
+.input-cantidad {
+    width: 80px;
+    padding: 0.5rem;
+    background-color: #0E0E18;
+    border: 1px solid #1C1C2C;
+    color: #FFFFFF;
+    border-radius: 6px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
