@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura | Mitologías</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: #0A0A12;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .factura {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            background-color: #171722;
+            border: 1px solid #BD8E43;
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            color: #BD8E43;
+        }
+
+        .datos {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .tabla-contenedor {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+
+        th {
+            background-color: #BD8E43;
+            color: #0A0A12;
+        }
+
+        .total {
+            text-align: right;
+            margin-top: 25px;
+            font-size: 22px;
+            color: #D8AC63;
+            font-weight: bold;
+        }
+
+        button, .boton {
+            display: inline-block;
+            padding: 12px 18px;
+            margin: 15px 8px 0 0;
+            background-color: #BD8E43;
+            color: #0A0A12;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover, .boton:hover {
+            background-color: #D8AC63;
+        }
+
+        #mensaje {
+            margin-top: 20px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+
+            .factura {
+                background: white;
+                color: black;
+                border: none;
+            }
+
+            button, .boton {
+                display: none;
+            }
+
+            h1, h2, .total {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="factura">
+        <h1>Mitologías</h1>
+        <h2>Comprobante de compra</h2>
+
+        <div class="datos">
+            <p><strong>Cliente:</strong> <span id="cliente"></span></p>
+            <p><strong>Correo:</strong> <span id="correo"></span></p>
+            <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+            <p><strong>Folio:</strong> <span id="folio"></span></p>
+        </div>
+
+        <h2>Productos comprados</h2>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+
+                <tbody id="detalleFactura"></tbody>
+            </table>
+        </div>
+
+        <p class="total">
+            Total: $<span id="total">0.00</span> MXN
+        </p>
+
+        <p id="mensaje"></p>
+
+        <button id="btnPDF" onclick="generarPDF()">
+            Descargar PDF y finalizar compra
+        </button>
+
+        <a class="boton" href="catalogo.html">
+            Volver al catálogo
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../JS/sesion.js"></script>
+    <script src="../JS/factura.js"></script>
+</body>
+</html>

@@ -9,7 +9,8 @@
     <script src="../JS/carrito.js"></script>
     <title>Carrito de Compras - Atlas de Mitologías</title>
 </head>
-<body onload="cargarCarrito()">
+<body onload="protegerPagina(); cargarCarrito();">
+
     <!-- Header principal -->
     <header class="header">
         <div class="header-contenido">
@@ -67,11 +68,20 @@
                         </button>
                         <button class="btn-reset-form" onclick="vaciarCarrito()">
                             Vaciar Carrito
+                        
+                        
+<button class="boton-compra" onclick="window.location.href='factura.html'">
+    Confirmar compra
+</button>
+
+
                         </button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+<script src="../JS/sesion.js"></script>
+<script src="../JS/carrito.js"></script>
 </body>
 </html>
