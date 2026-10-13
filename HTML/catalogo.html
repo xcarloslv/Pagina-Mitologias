@@ -1,30 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Catálogo - Atlas de Mitologías</title>
-    <link rel="stylesheet" href="../CSS/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carlos Emanuel López Villanueva, Luz Karina Araujo Aguilar, Jair Mardoqueo Sanchez Villa, Jovani Israel Perez Puente">
+    <link type="image/png" sizes="16x16" rel="icon" href="../IMG/icono.png">
+    <link rel="stylesheet" href="../CSS/style.css">
     <script src="../JS/carrito.js"></script>
-</head>
-<body>
-    <div class="container">
-        <div class="main">
-            <h3>Catálogo de Productos</h3>
-            
-            <form id="form_producto" name="prodform">
-                <label>Selecciona Mitología:</label>
-                <select id="producto">
-                    <option value="Mitología Griega|150">Mitología Griega - $150</option>
-                    <option value="Mitología Nórdica|200">Mitología Nórdica - $200</option>
-                    <option value="Mitología Egipcia|180">Mitología Egipcia - $180</option>
-                    <option value="Mitología Maya|160">Mitología Maya - $160</option>
-                    <option value="Mitología Japonesa|190">Mitología Japonesa - $190</option>
-                </select>
+    <title>Sección de Compras - Atlas de Mitologías</title>
 
-                <br/><br/>
-                <input type="button" value="Agregar al Carrito" id="add_cart" onclick="meterEnCarro()"/>
-                <input type="button" value="Ver Carrito" id="go_cart" onclick="irAlCarrito()"/>
-            </form>
+</head>
+<body onload="actualizarMitologia()">
+    <header class="header">
+        <div class="header-contenido">
+            <div class="logo-box">
+                <span class="logo-spark">✦</span>
+                <h3 class="nav-title">Atlas de Mitologías</h3>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-lista">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                    <li><a href="carrito.html" class="nav-link">Carrito</a></li>
+                </ul>
+            </nav>
+
+            <a href="catalogo.html" class="btn-regresar">
+                <span>←</span> Volver al catálogo
+            </a>
         </div>
-    </div>
+    </header>
+
+    <main>
+        <section class="sec-recomendaciones">
+            <div class="contenedor-form">
+                <div class="header-form">
+                    <span class="tagline-form">✦ TIENDA DE RELIQUIAS</span>
+                    <h2 class="titulo-form">Catálogo de Artículos Místicos</h2>
+                    <p class="desc-form">
+                        Filtra por mitología para explorar libros, réplicas y coleccionables. Selecciona el artículo deseado para ver sus detalles en la tabla y añadirlo a tu carrito.
+                    </p>
+                </div>
+
+                <div class="form-mitologia" style="margin-bottom: 2rem;">
+                    <div class="campo-grupo">
+                        <label for="select_mitologia">✦ Paso 1: Elige la Mitología que deseas ver:</label>
+                        <select id="select_mitologia" onchange="actualizarMitologia()">
+                            <option value="nordica">Mitología Nórdica</option>
+                            <option value="egipcia">Mitología Egipcia</option>
+                            <option value="maya">Mitología Maya</option>
+                            <option value="japonesa">Mitología Japonesa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-mitologia">
+                    
+                    <div class="campo-grupo">
+                        <label for="producto">✦ Paso 2: Selecciona un Artículo / Coleccionable:</label>
+                        <select id="producto" onchange="actualizarDetalleProducto()">
+                        </select>
+                    </div>
+
+                    <div style="margin-top: 1rem;">
+                        <table class="tabla-secundario">
+                            <thead>
+                                <tr>
+                                    <th style="width: 15%; text-align: center;">Imagen</th>
+                                    <th class="th-personaje">Artículo</th>
+                                    <th>Descripción de la Reliquia</th>
+                                    <th style="width: 18%;">Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: center; vertical-align: middle;">
+                                        <img id="img_art" src="" alt="Imagen del artículo" class="img-preview-articulo">
+                                    </td>
+                                    <td class="td-nombre" id="td_nombre_art">--</td>
+                                    <td class="td-texto" id="td_desc_art">--</td>
+                                    <td class="td-nombre" style="color: #BD8E43;" id="td_precio_art">--</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="separator-container">
+                        <hr class="linea-egipcia">
+                        <span class="symbol-icon">✦</span>
+                    </div>
+
+                    <div class="btn-container-form">
+                        <button type="button" class="btn-enviar-form" id="add_cart" onclick="meterEnCarro()">
+                            <span>+</span> Agregar al Carrito
+                        </button>
+                        <button type="button" class="btn-reset-form" id="go_cart" onclick="irAlCarrito()">
+                            Ver Carrito <span>→</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
 </body>
 </html>
